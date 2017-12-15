@@ -1,4 +1,11 @@
-# TWRP tree for Motorola Moto E4 (MediaTek)
+# TWRP tree for Motorola Moto E4
 
-Credits:
-Woods_f TWRP Device tree
+Variant
+-------
+  ```MediaTek```
+
+SoC
+---
+  ```MT6737m```
+  
+
