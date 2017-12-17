@@ -1,5 +1,5 @@
 #
-# system.prop for mt6737m
+# system.prop for woods
 #
 ro.hardware=mt6735
 ro.board.platform=mt6737m
