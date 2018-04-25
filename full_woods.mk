@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 PRODUCT_DEVICE := woods
 PRODUCT_NAME := full_woods
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := Moto E4
+PRODUCT_MODEL := Moto E⁴
 PRODUCT_MANUFACTURER := motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
