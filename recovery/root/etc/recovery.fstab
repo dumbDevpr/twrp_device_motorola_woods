@@ -1,11 +1,14 @@
-# twrp.fstab - woods
+# recovery.fstab - woods
 # --------------------------------
 # mount point	fstype    		device    	[device2]
 # -----------------------------------------------------------------------
 /system			ext4	/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/system		flags=display="System";backup=1;wipeingui
 /system_image	emmc	/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/system
-/cache			ext4	/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/cache		flags=display="Cache";backup=1;wipeingui;wipeduringfactoryreset
-/data			ext4	/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/userdata		flags=forceencrypt=/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/metadata
+/vendor			ext4	/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/vendor        flags=backup=1
+/vendor_image 	emmc 	/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/vendor 		flags=backup=0;flashimg=1
+/cache			ext4	/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/cache			flags=display="Cache";backup=1;wipeingui;wipeduringfactoryreset
+#/data			ext4	/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/userdata		flags=forceencrypt=/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/metadata
+/data 			ext4 	/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/userdata 		flags=encryptable=/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/metadata
 #######
 /boot			emmc	/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/boot		flags=display="Boot";backup=1
 /logo			emmc	/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/logo		flags=display="Logo";backup=1;flashimg=1
@@ -23,8 +26,9 @@
 /metadata		emmc	/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/metadata
 /oemkeystore	emmc	/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/oemkeystore
 #######
-/external_sd	auto	/dev/block/platform/mtk-msdc.0/11240000.msdc1/mmcblk1p1		/dev/block/platform/mtk-msdc.0/11240000.msdc1/mmcblk1 flags=display="Micro SDcard";storage;wipeingui;removable;backup=0;encryptable=userdata
+#/external_sd	auto	/dev/block/platform/mtk-msdc.0/11240000.msdc1/mmcblk1p1		/dev/block/platform/mtk-msdc.0/11240000.msdc1/mmcblk1 flags=display="Micro SDcard";storage;wipeingui;removable;backup=0;encryptable=userdata
+/external_sd 	auto 	/dev/block/mmcblk1p1 	/dev/block/mmcblk1 		flags=display="Micro SDcard";storage;wipeingui;removable;backup=0
 /usbotg			auto    /dev/block/sda1			/dev/block/sda			flags=display="Pendrive/USB OTG";storage;wipeingui;removable
 
-#end : izaq_kull
-#date : 20171012
+#end  : izaqkull
+#date : (c)2k18

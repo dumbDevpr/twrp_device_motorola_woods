@@ -14,11 +14,16 @@
 # limitations under the License.
 #
 
+LOCAL_PATH := device/motorola/woods
+
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
-
 $(call inherit-product, device/motorola/woods/full_woods.mk)
 
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    charger
+    
 PRODUCT_NAME := omni_woods
 
 # Ramdisk
@@ -29,8 +34,4 @@ PRODUCT_PACKAGES += \
     $(LOCAL_PATH)/recovery/root/init.recovery.usb.rc:root/init.recovery.usb.rc \
     $(LOCAL_PATH)/recovery/root/ueventd.mt6735.rc:root/ueventd.mt6735.rc
 
-#fix mtp
-PRODUCT_PACKAGES += \
-    $(LOCAL_PATH)/recovery/root/sbin/libtwrpmtp.so:root/sbin/libtwrpmtp.so \
-    $(LOCAL_PATH)/recovery/root/sbin/libusbhost.so:root/sbin/libusbhost.so \
-    $(LOCAL_PATH)/recovery/root/sbin/healthd:root/sbin/healthd
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
