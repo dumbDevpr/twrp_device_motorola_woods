@@ -1,4 +1,4 @@
-# TWRP tree for Motorola Moto E4
+# TWRP tree for Motorola Moto E⁴
 
 Variant
 -------
