@@ -32,6 +32,10 @@ TARGET_BOARD_PLATFORM := mt6737m
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := MT6735
 
+# toolchain(not from rom source)
+#KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-gnu-7.x/bin
+#TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-gnu-linux-androideabi-
+
 #KERNEL_TOOLCHAIN_PREFIX:=$(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/linaro-6.3.1_arm-linux-gnueabi/bin/arm-linux-gnueabi-
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/zImage-dtb
@@ -77,7 +81,7 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
 TW_MAX_BRIGHTNESS := 255
-TW_DEFAULT_BRIGHTNESS := 120		
+TW_DEFAULT_BRIGHTNESS := 120
 TW_EXCLUDE_SUPERSU := true
 TW_INCLUDE_FB2PNG := true
 TW_INCLUDE_INJECTTWRP := false
@@ -93,6 +97,7 @@ TW_HAS_MTP := true
 TW_MTP_DEVICE := /dev/mtp_usb
 TW_ALWAYS_RMRF := false
 TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery"
+TW_USE_TOOLBOX := true
 
 ###comment_out ---- <
 #TW_INTERNAL_STORAGE_PATH := "/emmc"
@@ -108,7 +113,6 @@ TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery"
 #TW_ALWAYS_RMRF := true
 #TW_NO_SCREEN_BLANK := true
 #TARGET_RECOVERY_DEVICE_MODULES := chargeled
-#TW_USE_TOOLBOX := true
 ### --- <
 
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
