@@ -36,7 +36,6 @@ TARGET_BOOTLOADER_BOARD_NAME := MT6735
 #KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-gnu-7.x/bin
 #TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-gnu-linux-androideabi-
 
-#KERNEL_TOOLCHAIN_PREFIX:=$(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/linaro-6.3.1_arm-linux-gnueabi/bin/arm-linux-gnueabi-
 BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/zImage-dtb
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,32N2 androidboot.selinux=permissive
@@ -69,7 +68,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
 PRODUCT_COPY_FILES += $(DEVICE_PATH)/recovery/root/etc/twrp.fstab
 
 # TWRP stuff
-TW_DEVICE_VERSION := oreo|woods|izaqkull
+TW_DEVICE_VERSION := 8.1|woods
 #========set woods dpi========#
 DEVICE_RESOLUTION := 720x1280
 TARGET_SCREEN_HEIGHT := 1280
@@ -95,7 +94,6 @@ TW_HAVE_SELINUX := true
 TW_DEFAULT_LANGUAGE := en
 TW_HAS_MTP := true
 TW_MTP_DEVICE := /dev/mtp_usb
-TW_ALWAYS_RMRF := false
 TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery"
 TW_USE_TOOLBOX := true
 
