@@ -21,14 +21,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 PRODUCT_DEVICE := woods
 PRODUCT_NAME := full_woods
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := Moto E⁴
+PRODUCT_MODEL := Moto E4
 PRODUCT_MANUFACTURER := motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
 		TARGET_DEVICE="woods" \
-		PRODUCT_NAME="woods" \
-		BUILD_FINGERPRINT="motorola/woods_retail/woods:7.1.1/NMA26.42-11-3/3:user/release-keys" \
-		PRIVATE_BUILD_DESC="woods_retail-user 7.1.1 NMA26.42-11-3 release-keys" \
-		BUILD_THUMBPRINT="7.1.1/NMA26.42-11-3/3:user/release-keys"
+		PRODUCT_NAME="woods"
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola

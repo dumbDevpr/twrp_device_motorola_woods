@@ -57,23 +57,23 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_KMODULES := true
 
 # Recovery
+BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := Moto_E4,Moto E4,E4,e4,woods,woods_f,woods_retail
 
+# Workaround for error copying vendor files to recovery ramdisk
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_VENDOR := vendor
+
 #Recovery FSTAB
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
 PRODUCT_COPY_FILES += $(DEVICE_PATH)/recovery/root/etc/twrp.fstab
 
 # TWRP stuff
-TW_DEVICE_VERSION := 8.1|woods
-#========set woods dpi========#
-DEVICE_RESOLUTION := 720x1280
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
-#========end #set========#
+#TW_DEVICE_VERSION := 8.1|woods
 TW_THEME := portrait_hdpi
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
@@ -83,7 +83,6 @@ TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 120
 TW_EXCLUDE_SUPERSU := true
 TW_INCLUDE_FB2PNG := true
-TW_INCLUDE_INJECTTWRP := false
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_NO_CPU_TEMP := true
 TW_REBOOT_RECOVERY := true
@@ -96,21 +95,5 @@ TW_HAS_MTP := true
 TW_MTP_DEVICE := /dev/mtp_usb
 TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery"
 TW_USE_TOOLBOX := true
-
-###comment_out ---- <
-#TW_INTERNAL_STORAGE_PATH := "/emmc"
-#TW_INTERNAL_STORAGE_MOUNT_POINT := "emmc"
-#TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-#TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-#TARGET_USERIMAGES_USE_EXT4 := true
-#TW_CRYPTO_MNT_POINT := "/data"
-#TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered"
-#TW_INCLUDE_CRYPTO := true
-#TW_CRYPTO_FS_TYPE := "ext4"
-#TW_NEVER_UNMOUNT_SYSTEM := true
-#TW_ALWAYS_RMRF := true
-#TW_NO_SCREEN_BLANK := true
-#TARGET_RECOVERY_DEVICE_MODULES := chargeled
-### --- <
 
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
