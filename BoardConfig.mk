@@ -94,7 +94,9 @@ TW_DEFAULT_LANGUAGE := en
 TW_EXTRA_LANGUAGES := true
 TW_HAS_MTP := true
 TW_MTP_DEVICE := /dev/mtp_usb
-#TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery"
-TW_USE_TOOLBOX := true
+TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery"
+#TW_USE_TOOLBOX := true
+INTERNAL_LOCAL_CLANG_EXCEPTION_PROJECTS := external/busybox/
+
 
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
