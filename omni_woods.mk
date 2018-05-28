@@ -24,10 +24,6 @@ $(call inherit-product, vendor/omni/config/common.mk)
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/motorola/woods/full_woods.mk)
 
-PRODUCT_PACKAGES += \
-    charger_res_images \
-    charger
-
 PRODUCT_NAME := omni_woods
 
 # Ramdisk
