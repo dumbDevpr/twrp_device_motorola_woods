@@ -7,11 +7,11 @@ Variant
 SoC
 ---
   ```MT6737m```
-  
+
 
 ## procedure
 
-- sync
+- sync [minimal or full, ... your choice !]
 ```javascript
 repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-8.1
 ```
@@ -21,7 +21,7 @@ repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifest_
 ```javascript
 git clone https://github.com/iykequame/twrp_device_motorola_woods.git -b android-8.1 device/motorola/woods
 ```
-- compiling ... 
+- compiling ...
 ```javascript
 . build/envsetup.sh
 ```
@@ -29,6 +29,6 @@ git clone https://github.com/iykequame/twrp_device_motorola_woods.git -b android
 lunch omni_woods-eng
 ```
 ```javascript
-mka -j16 recoveryimage
+mka -j16 recoveryimage  "or"  make recoveryimage -j16
 ```
 - !Done

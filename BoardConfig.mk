@@ -13,11 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
+#device_path
 DEVICE_PATH := device/motorola/woods
 
-#TARGET_RECOVERY_DEVICE_DIRS := $(DEVICE_PATH)
-FORCE_32_BIT := true
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
@@ -52,7 +50,8 @@ BOARD_USES_MTK_HARDWARE := true
 MTK_HARDWARE := true
 
 # Partitions
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
+#BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
+BOARD_USES_FULL_RECOVERY_IMAGE := true
 BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_KMODULES := true
 
@@ -73,7 +72,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
 PRODUCT_COPY_FILES += $(DEVICE_PATH)/recovery/root/etc/twrp.fstab
 
 # TWRP stuff
-TW_DEVICE_VERSION := 8.1 > iᴢᴀϙkᴜʟʟ
+#TW_DEVICE_VERSION := 8.1 > iᴢᴀϙkᴜʟʟ
 TW_THEME := portrait_hdpi
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
@@ -95,8 +94,8 @@ TW_EXTRA_LANGUAGES := true
 TW_HAS_MTP := true
 TW_MTP_DEVICE := /dev/mtp_usb
 TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery"
-TW_USE_TOOLBOX := true
-INTERNAL_LOCAL_CLANG_EXCEPTION_PROJECTS := external/busybox/
+#TW_USE_TOOLBOX := true
+#INTERNAL_LOCAL_CLANG_EXCEPTION_PROJECTS := external/busybox/
 
 
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
