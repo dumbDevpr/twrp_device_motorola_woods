@@ -69,11 +69,10 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 #unpack
 LOCAL_ADDITIONAL_DEPENDENCIES += zip
-LOCAL_ADDITIONAL_DEPENDENCIES += unzip 
+LOCAL_ADDITIONAL_DEPENDENCIES += unzip
 
 #Recovery FSTAB
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
-PRODUCT_COPY_FILES += $(DEVICE_PATH)/recovery/root/etc/twrp.fstab
 
 # TWRP stuff
 #TW_DEVICE_VERSION := 8.1 > izaqkull

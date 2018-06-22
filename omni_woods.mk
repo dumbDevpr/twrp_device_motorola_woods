@@ -26,7 +26,6 @@ PRODUCT_NAME := omni_woods
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    $(LOCAL_PATH)/recovery/root/init.mt6735.power.rc:root/init.mt6735.power.rc \
     $(LOCAL_PATH)/recovery/root/init.recovery.mt6735.rc:root/init.recovery.mt6735.rc \
     $(LOCAL_PATH)/recovery/root/init.recovery.service.rc:root/init.recovery.service.rc \
     $(LOCAL_PATH)/recovery/root/init.recovery.usb.rc:root/init.recovery.usb.rc \
