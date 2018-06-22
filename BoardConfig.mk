@@ -67,12 +67,16 @@ TARGET_OTA_ASSERT_DEVICE := Moto_E4,Moto E4,E4,e4,woods,woods_f,woods_retail
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 
+#unpack
+LOCAL_ADDITIONAL_DEPENDENCIES += zip
+LOCAL_ADDITIONAL_DEPENDENCIES += unzip 
+
 #Recovery FSTAB
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
 PRODUCT_COPY_FILES += $(DEVICE_PATH)/recovery/root/etc/twrp.fstab
 
 # TWRP stuff
-#TW_DEVICE_VERSION := 8.1 > iᴢᴀϙkᴜʟʟ
+#TW_DEVICE_VERSION := 8.1 > izaqkull
 TW_THEME := portrait_hdpi
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
@@ -94,7 +98,7 @@ TW_EXTRA_LANGUAGES := true
 TW_HAS_MTP := true
 TW_MTP_DEVICE := /dev/mtp_usb
 TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery"
-#TW_USE_TOOLBOX := true
+TW_USE_TOOLBOX := true
 #INTERNAL_LOCAL_CLANG_EXCEPTION_PROJECTS := external/busybox/
 
 
