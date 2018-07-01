@@ -19,7 +19,7 @@ repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifest_
  repo sync -j16
 ```
 ```javascript
-git clone https://github.com/iykequame/twrp_device_motorola_woods.git -b android-8.1 device/motorola/woods
+git clone https://github.com/iykequame/twrp_device_motorola_woods.git -b android-8.1-vendor device/motorola/woods
 ```
 - compiling ...
 ```javascript
