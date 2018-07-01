@@ -44,6 +44,9 @@ BOARD_RAMDISK_OFFSET := 0x04000000
 BOARD_TAGS_OFFSET := 0xE000000
 BOARD_MKBOOTIMG_ARGS := --kernel_offset $(BOARD_KERNEL_OFFSET) --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_TAGS_OFFSET)
 
+# allow building ramdisk(s) with lzma
+LZMA_RAMDISK_TARGETS += recovery
+
 # MTK Hardware
 BOARD_HAS_MTK_HARDWARE := true
 BOARD_USES_MTK_HARDWARE := true
