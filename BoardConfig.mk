@@ -45,7 +45,7 @@ BOARD_TAGS_OFFSET := 0xE000000
 BOARD_MKBOOTIMG_ARGS := --kernel_offset $(BOARD_KERNEL_OFFSET) --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_TAGS_OFFSET)
 
 # allow building ramdisk(s) with lzma
-LZMA_RAMDISK_TARGETS += recovery
+#LZMA_RAMDISK_TARGETS += recovery
 
 # MTK Hardware
 BOARD_HAS_MTK_HARDWARE := true
@@ -70,10 +70,6 @@ TARGET_OTA_ASSERT_DEVICE := Moto_E4,Moto E4,E4,e4,woods,woods_f,woods_retail
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 
-#unpack
-LOCAL_ADDITIONAL_DEPENDENCIES += zip
-LOCAL_ADDITIONAL_DEPENDENCIES += unzip
-
 #Recovery FSTAB
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
 
@@ -96,12 +92,10 @@ TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_HAVE_SELINUX := true
 TW_DEFAULT_LANGUAGE := en
-TW_EXTRA_LANGUAGES := true
 TW_HAS_MTP := true
 TW_MTP_DEVICE := /dev/mtp_usb
-TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery"
+#TW_CUSTOM_BATTERY_PATH := "/sys/devices/platform/battery/power_supply/battery"
 TW_USE_TOOLBOX := true
-#INTERNAL_LOCAL_CLANG_EXCEPTION_PROJECTS := external/busybox/
 
 
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
