@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
 #device_path
 LOCAL_PATH := device/motorola/woods
 
@@ -30,8 +31,6 @@ PRODUCT_PACKAGES += \
     $(LOCAL_PATH)/recovery/root/init.recovery.service.rc:root/init.recovery.service.rc \
     $(LOCAL_PATH)/recovery/root/init.recovery.usb.rc:root/init.recovery.usb.rc \
     $(LOCAL_PATH)/recovery/root/ueventd.mt6735.rc:root/ueventd.mt6735.rc
-
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 #Allow_missing_dependencies
 ALLOW_MISSING_DEPENDENCIES=true

@@ -1,0 +1,8 @@
+[
+  {
+    "remote":"github",
+    "repository": "dumbDevpr/kernel_motorola_woods",
+    "target_path": "kernel/motorola/woods",
+    "revision":"lineage-15.1"
+  }
+]
